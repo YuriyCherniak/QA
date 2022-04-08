@@ -24,4 +24,22 @@ public class PullRequest {
         driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("telegram" + "\n");
         Assert.assertTrue(driver.getCurrentUrl().contains("telegram"));
     }
+    @Test
+    public void checkEnterForGit3(){
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(Linkk);
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("facebook" + "\n");
+        Assert.assertTrue(driver.getCurrentUrl().contains("facebook"));
+    }
+    @Test
+    public void checkEnterForGit4(){
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(Linkk);
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("car" + "\n");
+        Assert.assertTrue(driver.getCurrentUrl().contains("car"));
+    }
 }
