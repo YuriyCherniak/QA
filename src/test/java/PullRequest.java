@@ -15,4 +15,13 @@ public class PullRequest {
         driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("instagram" + "\n");
         Assert.assertTrue(driver.getCurrentUrl().contains("instagram"));
     }
+    @Test
+    public void checkEnterForGit2(){
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(Linkk);
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("telegram" + "\n");
+        Assert.assertTrue(driver.getCurrentUrl().contains("telegram"));
+    }
 }
