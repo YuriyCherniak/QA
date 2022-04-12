@@ -42,4 +42,15 @@ public class PullRequest {
         driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("car" + "\n");
         Assert.assertTrue(driver.getCurrentUrl().contains("car"));
     }
+    @Test
+    public void checkEnterForGit5() {
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(Linkk);
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("Twitter" + "\n");
+        Assert.assertTrue(driver.getCurrentUrl().contains("Twitter"));
+    }
+
+
 }
