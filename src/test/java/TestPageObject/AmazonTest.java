@@ -5,11 +5,11 @@ import org.testng.annotations.Test;
 
 public class AmazonTest extends TestInit{
 
-    @Test
-    public void checkHeader(){
-        AmazonHomePage amazonHomePage = new AmazonHomePage;
+//    @Test
+//    public void checkHeader(){
+//        AmazonHomePage amazonHomePage = new AmazonHomePage;
+//
+//        goToAmazon();
 
-        goToAmazon();
 
-    }
 }

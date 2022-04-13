@@ -9,11 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 
 public class TestInit {
-    WebDriver driver;
-
-    public void goToAmazon(){
-        driver.get("https://www.amazon.com/");
-    }
+    public WebDriver driver;
 
 
     @BeforeTest
@@ -26,6 +22,13 @@ public class TestInit {
     @AfterMethod
     public void finish(){
         driver.quit();
+    }
+    public void sleep(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 
