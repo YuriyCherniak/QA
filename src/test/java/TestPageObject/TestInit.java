@@ -23,6 +23,7 @@ public class TestInit {
     public void finish(){
         driver.quit();
     }
+
     public void sleep(int seconds) {
         try {
             Thread.sleep(seconds * 1000);
