@@ -37,7 +37,7 @@ public class HomePage extends BasePage {
         return driver.findElement(By.xpath("//a[@id='menu-signin']"));
     }
 
-
-
-
+    public WebElement checkLogo() {
+        return driver.findElement(By.xpath("//img[@class='logo-alternate']"));
+    }
 }

@@ -26,4 +26,18 @@ public class EatStreet extends TestInit {
 
         Assert.assertTrue(homePage.incorrectMsg().isDisplayed());
     }
+
+    @Test
+    public void checkEatStreetLogo(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goToEatStreet();
+        homePage.clickBtnGoIt().click();
+
+        Assert.assertTrue(homePage.checkLogo().isDisplayed());
+
+
+
+
+
+    }
 }
