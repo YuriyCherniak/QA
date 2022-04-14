@@ -48,4 +48,20 @@ public class HomePage extends BasePage {
     public WebElement cartEmptyMsg() {
         return driver.findElement(By.xpath("//a[contains(text(), 'Cart is Empty')]"));
     }
+
+    public WebElement inputNYC() {
+        return driver.findElement(By.xpath("//input[@id='input-food-search']"));
+    }
+
+    public WebElement clickGetFedBtn() {
+        return driver.findElement(By.xpath("//a[@id='find-restaurants']"));
+    }
+
+    public WebElement clickEnterBtn() {
+        return driver.findElement(By.xpath("//a[@id='enter-address-btn']"));
+    }
+
+    public WebElement resultNYC() {
+        return driver.findElement(By.xpath("//h1[contains(text(), 'New York City Restaurants')]"));
+    }
 }
