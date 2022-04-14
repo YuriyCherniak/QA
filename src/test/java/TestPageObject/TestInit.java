@@ -11,6 +11,10 @@ import org.testng.annotations.BeforeTest;
 public class TestInit {
     public WebDriver driver;
 
+    public void openUrl(String site) {
+        driver.get(site);
+    }
+
 
     @BeforeTest
     public void start(){
@@ -19,10 +23,10 @@ public class TestInit {
         driver.manage().window().maximize();
     }
 
-//    @AfterMethod
-//    public void finish(){
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void finish(){
+        driver.quit();
+    }
 
     public void sleep(int seconds) {
         try {

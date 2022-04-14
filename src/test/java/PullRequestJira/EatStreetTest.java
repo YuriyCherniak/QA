@@ -1,23 +1,16 @@
 package PullRequestJira;
 
 import TestPageObject.TestInit;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class EatStreet extends TestInit {
+public class EatStreetTest extends TestInit {
 
     @Test
     public void checkIncorrectSignIn(){
         HomePage homePage = new HomePage(driver);
-        homePage.goToEatStreet();
-        homePage.clickBtnGoIt().click();
+        openUrl("https://eatstreet.com/");
+        homePage.clickBtnGotIt().click();
         homePage.clickSignInBtn().click();
         homePage.inputEmail().sendKeys("qwerty@gmail.com");
         homePage.inputPass().sendKeys("qwerty123");
@@ -30,8 +23,8 @@ public class EatStreet extends TestInit {
     @Test
     public void checkEatStreetLogo(){
         HomePage homePage = new HomePage(driver);
-        homePage.goToEatStreet();
-        homePage.clickBtnGoIt().click();
+        openUrl("https://eatstreet.com/");
+        homePage.clickBtnGotIt().click();
 
         Assert.assertTrue(homePage.checkLogo().isDisplayed());
     }
@@ -39,8 +32,8 @@ public class EatStreet extends TestInit {
     @Test
     public void checkEmptyCart(){
         HomePage homePage = new HomePage(driver);
-        homePage.goToEatStreet();
-        homePage.clickBtnGoIt().click();
+        openUrl("https://eatstreet.com/");
+        homePage.clickBtnGotIt().click();
         homePage.clickCartBtn().click();
 
         Assert.assertTrue(homePage.cartEmptyMsg().isDisplayed());
@@ -49,13 +42,25 @@ public class EatStreet extends TestInit {
     @Test
     public void searchNYCRestorans(){
         HomePage homePage = new HomePage(driver);
-        homePage.goToEatStreet();
-        homePage.clickBtnGoIt().click();
+        openUrl("https://eatstreet.com/");
+        homePage.clickBtnGotIt().click();
         homePage.inputNYC().sendKeys("NYC\n");
         homePage.clickEnterBtn().click();
         homePage.clickGetFedBtn().click();
-        sleep(2);
+        sleep(3);
 
         Assert.assertTrue(homePage.resultNYC().isDisplayed());
     }
+
+    @Test
+    public void checkSignInButton(){
+        HomePage homePage = new HomePage(driver);
+        openUrl("https://eatstreet.com/signin");
+        homePage.clickBtnGotIt().click();
+        homePage.clickSignInBtn().click();
+
+        Assert.assertTrue(homePage.driver.getCurrentUrl().contains("/signin"));
+    }
+
+
 }
