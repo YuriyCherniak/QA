@@ -10,13 +10,10 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
-    public WebElement clickBtnGoIt() {
+    public WebElement clickBtnGotIt() {
         return driver.findElement(By.xpath("//button[contains(text(), 'Got it')]"));
     }
 
-    public void goToEatStreet(){
-        driver.get("https://eatstreet.com");
-    }
     public WebElement incorrectMsg() {
         return driver.findElement(By.xpath("//span[contains(text(), 'incorrect.')]"));
     }
