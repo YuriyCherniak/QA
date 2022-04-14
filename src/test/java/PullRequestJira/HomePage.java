@@ -61,4 +61,12 @@ public class HomePage extends BasePage {
     public WebElement resultNYC() {
         return driver.findElement(By.xpath("//h1[contains(text(), 'New York City Restaurants')]"));
     }
+
+    public WebElement clickBtnAboutUs() {
+        return driver.findElement(By.xpath("//a[contains(text(), 'About Us')]"));
+    }
+
+    public WebElement availabilityHeadquarters() {
+        return driver.findElement(By.xpath("//h2[contains(text(), 'Headquarters')]"));
+    }
 }

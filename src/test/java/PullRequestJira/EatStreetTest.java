@@ -62,5 +62,17 @@ public class EatStreetTest extends TestInit {
         Assert.assertTrue(homePage.driver.getCurrentUrl().contains("/signin"));
     }
 
+    @Test
+    public void checkHeadquarters(){
+        HomePage homePage = new HomePage(driver);
+        openUrl("https://eatstreet.com");
+        homePage.clickBtnGotIt().click();
+        homePage.clickBtnAboutUs().click();
+        sleep(2);
+
+        Assert.assertTrue(homePage.availabilityHeadquarters().isDisplayed());
+
+    }
+
 
 }
