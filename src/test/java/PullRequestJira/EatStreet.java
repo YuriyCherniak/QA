@@ -34,10 +34,15 @@ public class EatStreet extends TestInit {
         homePage.clickBtnGoIt().click();
 
         Assert.assertTrue(homePage.checkLogo().isDisplayed());
+    }
 
+    @Test
+    public void checkEmptyCart(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goToEatStreet();
+        homePage.clickBtnGoIt().click();
+        homePage.clickCartBtn().click();
 
-
-
-
+        Assert.assertTrue(homePage.cartEmptyMsg().isDisplayed());
     }
 }

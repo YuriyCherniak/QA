@@ -19,10 +19,10 @@ public class TestInit {
         driver.manage().window().maximize();
     }
 
-    @AfterMethod
-    public void finish(){
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void finish(){
+//        driver.quit();
+//    }
 
     public void sleep(int seconds) {
         try {
