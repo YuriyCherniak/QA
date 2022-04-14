@@ -40,4 +40,12 @@ public class HomePage extends BasePage {
     public WebElement checkLogo() {
         return driver.findElement(By.xpath("//img[@class='logo-alternate']"));
     }
+
+    public WebElement clickCartBtn() {
+        return driver.findElement(By.xpath("//a[contains(text(), 'Cart ')]"));
+    }
+
+    public WebElement cartEmptyMsg() {
+        return driver.findElement(By.xpath("//a[contains(text(), 'Cart is Empty')]"));
+    }
 }
