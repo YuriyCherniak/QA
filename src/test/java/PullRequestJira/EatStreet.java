@@ -45,4 +45,17 @@ public class EatStreet extends TestInit {
 
         Assert.assertTrue(homePage.cartEmptyMsg().isDisplayed());
     }
+
+    @Test
+    public void searchNYCRestorans(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goToEatStreet();
+        homePage.clickBtnGoIt().click();
+        homePage.inputNYC().sendKeys("NYC\n");
+        homePage.clickEnterBtn().click();
+        homePage.clickGetFedBtn().click();
+        sleep(2);
+
+        Assert.assertTrue(homePage.resultNYC().isDisplayed());
+    }
 }
