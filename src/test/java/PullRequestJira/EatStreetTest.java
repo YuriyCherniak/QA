@@ -73,10 +73,11 @@ public class EatStreetTest extends TestInit {
         Assert.assertTrue(homePage.availabilityHeadquarters().isDisplayed());
     }
 
-//    @Test
-//    public void openRestInLV(){
-//
-//    }
+    @Test
+    public void openRestInLV(){
+
+
+    }
 
 
 }
