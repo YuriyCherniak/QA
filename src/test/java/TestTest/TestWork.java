@@ -207,4 +207,28 @@ public class TestWork extends TestInitES{
         Assert.assertTrue(tempePage.referMsg().isDisplayed());
     }
 
+    @Test
+    public void checkLiveChat(){
+        HomePageES homePageES = new HomePageES(driver);
+        goToUrl("https://qa2.eatstreet.com/");
+        homePageES.gotItBtn().click();
+        homePageES.signInBtn().click();
+        SignInPage signInPage = new SignInPage(driver);
+        signInPage.inputEmail().sendKeys("qwerty123@fgf.com");
+        signInPage.inputPassword().sendKeys("1Qwertyqazwsxedc");
+        signInPage.signInBtn().click();
+        sleep(4);
+        homePageES.getLiveChatBtn().click();
+        homePageES.goToTheSecondWindowTab(driver,10);
+        sleep(6);
+        LiveChatPage liveChatPage = new LiveChatPage(driver);
+        liveChatPage.sendMsg().sendKeys("Hello\n");
+
+        Assert.assertTrue(liveChatPage.endChat().isDisplayed());
+
+
+
+
+    }
+
 }
