@@ -15,7 +15,7 @@ public class EatStreetTest extends TestInit {
         homePage.inputEmail().sendKeys("qwerty@gmail.com");
         homePage.inputPass().sendKeys("qwerty123");
         homePage.clickSignIn().click();
-        sleep(2);
+        sleep(3);
 
         Assert.assertTrue(homePage.incorrectMsg().isDisplayed());
     }
@@ -71,8 +71,12 @@ public class EatStreetTest extends TestInit {
         sleep(2);
 
         Assert.assertTrue(homePage.availabilityHeadquarters().isDisplayed());
-
     }
+
+//    @Test
+//    public void openRestInLV(){
+//
+//    }
 
 
 }

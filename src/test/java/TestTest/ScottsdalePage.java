@@ -1,0 +1,16 @@
+package TestTest;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class ScottsdalePage extends BasePageES {
+    public ScottsdalePage(WebDriver driver) {
+        super(driver);
+    }
+
+    public WebElement getLogoBtn() {
+        return driver.findElement(By.xpath("//img[@class='logo-alternate']"));
+
+    }
+}
