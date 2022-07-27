@@ -224,7 +224,7 @@ public class TestWork extends TestInitES{
         LiveChatPage liveChatPage = new LiveChatPage(driver);
         liveChatPage.sendMsg().sendKeys("Hello\n");
 
-        Assert.assertTrue(liveChatPage.endChat().isDisplayed());
+        Assert.assertTrue(liveChatPage.endChat().isDisplayed() );
 
 
 
